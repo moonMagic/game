@@ -15,6 +15,13 @@ public interface ThreadSign {
 
     /**
      * 当完成逻辑任务后执行
+     *
+     * @param workEndTimer 任务执行完毕的时间
      */
-    void completionLogicalTask();
+    void completionLogicalTask(long workEndTimer);
+
+    /**
+     * 进行日志的记录处理
+     */
+    void record();
 }

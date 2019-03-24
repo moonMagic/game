@@ -7,7 +7,7 @@ import org.springframework.context.support.FileSystemXmlApplicationContext;
 /**
  * @author CharlesLee
  */
-public class ProjectManager {
+public final class ProjectManager {
 
     private static final ProjectManager PROJECT_MANAGER = new ProjectManager();
 
