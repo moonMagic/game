@@ -2,6 +2,7 @@ package com.charles.utils.thread;
 
 /**
  * 自定义任务线程
+ * 需要注意的是该线程是提交至线程池的，如果不是提交至线程池的任务不是必须继承该类
  *
  * @author CharlesLee
  */
@@ -35,8 +36,8 @@ public abstract class BaseTaskRunnable implements Runnable, ThreadSign {
     public void run() {
         startTime = System.currentTimeMillis();
         startBusinessLogic();
-        long endTime = System.currentTimeMillis();
-        completionLogicalTask();
+        completionLogicalTask(System.currentTimeMillis());
+        record();
     }
 
     public String getTaskName() {

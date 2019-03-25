@@ -1,7 +1,7 @@
-package com.charles.entity;
+package com.charles.manager;
 
 
-import com.charles.manager.ProjectManager;
+import com.charles.entity.BaseRecyclable;
 import io.netty.util.Recycler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -19,7 +19,7 @@ import java.util.Map;
  *
  * @author CharlesLee
  */
-public class RecyclableObjectFactory {
+public final class RecyclableObjectFactory {
 
     private static final Logger LOGGER = LogManager.getLogger(RecyclableObjectFactory.class);
 
@@ -77,23 +77,18 @@ public class RecyclableObjectFactory {
         }
         synchronized (recycler) {
             BaseRecyclable result = recycler.get();
-            result.inUse = true;
-            result.startUpTime = System.currentTimeMillis();
+            result.setInUse(true);
+            result.setStartUpTime(System.currentTimeMillis());
             return (T) result;
         }
     }
 
-    public void recycle(Object o) {
+    public void recycle(BaseRecyclable o) {
         if (o == null) {
             return;
         }
-        if (o instanceof BaseRecyclable) {
-            BaseRecyclable baseRecyclable = (BaseRecyclable) o;
-            if (baseRecyclable.inUse) {
-                baseRecyclable.autoRecycle();
-            }
-        } else {
-            throw new RuntimeException("object recycling error : " + o.getClass().getName() + " has no inheritance " + BaseRecyclable.class.getName());
+        if (o.isInUse()) {
+            o.autoRecycle();
         }
     }
 }
