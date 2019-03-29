@@ -77,13 +77,7 @@ public final class TcpServer implements Runnable {
                             ch.pipeline().addLast("timeOut", new TimeoutProcessor());
                             ch.pipeline().addLast(new Decoder());
                             ch.pipeline().addLast(new Encoder());
-//                            ch.pipeline().addLast(new BaseMessageHandler() {
-//                                @Override
-//                                public BaseTcpMessageWork get(ChannelHandlerContext ctx, Message msg) {
-//                                    return ApplicationContext.getInstance().getBeanSingle(TcpManager.class).getTcpServer(msg.getCmd(), msg.getPort());
-//                                }
-//                            });
-
+                            ch.pipeline().addLast(new MessageHandler());
                         }
                     }).option(ChannelOption.SO_REUSEADDR, true)
                     .option(ChannelOption.ALLOCATOR, PooledByteBufAllocator.DEFAULT)
@@ -123,6 +117,7 @@ public final class TcpServer implements Runnable {
     }
 
     public int getPort() {
+
         return port;
     }
 }

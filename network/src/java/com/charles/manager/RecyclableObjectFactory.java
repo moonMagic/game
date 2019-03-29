@@ -73,7 +73,7 @@ public final class RecyclableObjectFactory {
     public <T> T get(Class<? extends BaseRecyclable> clazz) {
         Recycler<? extends BaseRecyclable> recycler = cache.get(clazz);
         if (recycler == null) {
-            throw new RuntimeException();
+            throw new RuntimeException(clazz.getName()  + "不是一个可回收对象, 请检查该类是否继承 : com.charles.entity.BaseRecyclable ");
         }
         synchronized (recycler) {
             BaseRecyclable result = recycler.get();

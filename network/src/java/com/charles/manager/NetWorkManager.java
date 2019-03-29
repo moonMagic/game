@@ -29,6 +29,11 @@ public class NetWorkManager {
     /**
      * TCP监听器端口线程组,该线程组只需要最多监听一个端口，所以只需要初始化二条监听线程即可
      */
+    private EventLoopGroup bossGroup = new NioEventLoopGroup(SystemDef.SYSTEM_CPU_COUNT, new DefaultThreadFactory("netty-tcp-server-accept", true));
+
+    /**
+     * boss group 线程组监听策略, 如果是网关服务因为需要启动大量的连接,所以需要启动多条线程,而内部服务的任务接收与发送只需要一条线程即可,因为不会有大量连接申请
+     */
     private EventLoopGroup bossGroup = new NioEventLoopGroup(2, new DefaultThreadFactory("netty-tcp-server-accept", true));
 
     /**
