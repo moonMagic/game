@@ -1,0 +1,15 @@
+
+isquid:CommentedOutCodeLineb"<This block of commented-out lines of code should be removed.(”‰ÎÝ8Î¾ËŒ-
+nsquid:CommentedOutCodeLine]"<This block of commented-out lines of code should be removed.(Éÿ¦Þÿÿÿÿÿ8Î¾ËŒ-
+^squid:UnusedPrivateMethod8"2Remove this unused private "initBootstrap" method.(ÅËÏ8ž©ÑŒ-
+¤squid:S1186y"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(íµ£‘ÿÿÿÿÿ8Î¾ËŒ-
+nsquid:CommentedOutCodeLinel"<This block of commented-out lines of code should be removed.(ñ¥ùšøÿÿÿÿ8Î¾ËŒ-
+nsquid:CommentedOutCodeLineX"<This block of commented-out lines of code should be removed.(Ÿä™¾øÿÿÿÿ8Î¾ËŒ-
+ƒsquid:UselessImportCheck"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡ž¸Îùÿÿÿÿ8ž©ÑŒ-
+Nsquid:S1068"0Remove this unused "systemConfig" private field.(¶×Áß8Î¾ËŒ-
+Vsquid:S1172y"3Remove this unused method parameter "clientFuture".(íµ£‘ÿÿÿÿÿ8Î¾ËŒ-
+¥squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(°ëÜöþÿÿÿÿ8Î¾ËŒ-
+Hsquid:S1068"*Remove this unused "LOGGER" private field.(”—¿Û8Î¾ËŒ-
+nsquid:CommentedOutCodeLineE"<This block of commented-out lines of code should be removed.(ú¢Ñýÿÿÿÿÿ8Î¾ËŒ-
+isquid:CommentedOutCodeLinei"<This block of commented-out lines of code should be removed.(Ž›Á®8Î¾ËŒ-
+^squid:UnusedPrivateMethody"-Remove this unused private "register" method.(íµ£‘ÿÿÿÿÿ8Î¾ËŒ-

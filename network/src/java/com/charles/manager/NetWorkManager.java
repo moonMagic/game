@@ -1,5 +1,7 @@
 package com.charles.manager;
 
+import com.charles.config.SystemConfig;
+import com.charles.def.enums.ServerType;
 import com.charles.def.interfaces.SystemDef;
 import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
@@ -14,9 +16,7 @@ import org.apache.logging.log4j.Logger;
  */
 public class NetWorkManager {
 
-    private NetWorkManager() {
-
-    }
+    private SystemConfig systemConfig;
 
     private static final NetWorkManager NET_WORK_MANAGER = new NetWorkManager();
 
@@ -27,36 +27,46 @@ public class NetWorkManager {
     private static final Logger LOGGER = LogManager.getLogger(NetWorkManager.class);
 
     /**
-     * TCP监听器端口线程组,该线程组只需要最多监听一个端口，所以只需要初始化二条监听线程即可
+     * tcp 服务端端口线程组监听
      */
-    private EventLoopGroup bossGroup = new NioEventLoopGroup(SystemDef.SYSTEM_CPU_COUNT, new DefaultThreadFactory("netty-tcp-server-accept", true));
+    private EventLoopGroup serviceBossGroup;
 
     /**
-     * boss group 线程组监听策略, 如果是网关服务因为需要启动大量的连接,所以需要启动多条线程,而内部服务的任务接收与发送只需要一条线程即可,因为不会有大量连接申请
+     * tcp 网络读写线程组监听,服务端和客户端共用线程组
      */
-    private EventLoopGroup bossGroup = new NioEventLoopGroup(2, new DefaultThreadFactory("netty-tcp-server-accept", true));
+    private EventLoopGroup workerGroup;
 
     /**
-     * TCP网络读写监听线程组,该线程组需要监听所有的网络读写操作，但是任务线程池也需要分配一定的资源，所以这里只设置所有CPU数量的线程即可
+     * http服务线程组,只需要初始化一条线程,用来做端口和读写监听,因为HTTP服务有些服务端是不需要启动的
      */
-    private EventLoopGroup workerGroup =
-            new NioEventLoopGroup(SystemDef.SYSTEM_CPU_COUNT, new DefaultThreadFactory("netty-tcp-server-monitoring-read-write", true));
+    private EventLoopGroup httpWorkerAndBossGroup;
 
-    /**
-     * http服务线程组,http服务不参与网络任务,只提供查询等后台功能,所以使用量非常少,初始化一条线程足够了
-     */
-    private EventLoopGroup httpWorkGroup = new NioEventLoopGroup(1, new DefaultThreadFactory("netty-http-server", true));
+    private NetWorkManager() {
+        systemConfig = ProjectManager.getInstance().getContext().getBean(SystemConfig.class);
+        if (systemConfig.isServiceHttpOpen()) {
+            httpWorkerAndBossGroup = new NioEventLoopGroup(1, new DefaultThreadFactory("netty-http-server", true));
+        }
 
+        // io线程组监听策略都相同
+        workerGroup =
+                new NioEventLoopGroup(SystemDef.SYSTEM_CPU_COUNT < 4 ? SystemDef.SYSTEM_CPU_COUNT * 2 : SystemDef.SYSTEM_CPU_COUNT,
+                        new DefaultThreadFactory("netty-tcp-monitoring-read-write", true));
 
-    public EventLoopGroup getBossGroup() {
-        return bossGroup;
+        int cpuSize = systemConfig.getServerType() == ServerType.GATEWAY_SERVICE.getKey() ? SystemDef.SYSTEM_CPU_COUNT / 2 : 1;
+        serviceBossGroup =
+                new NioEventLoopGroup(cpuSize, new DefaultThreadFactory("netty-tcp-server-accept", true));
     }
+
+
 
     public EventLoopGroup getWorkerGroup() {
         return workerGroup;
     }
 
-    public EventLoopGroup getHttpWorkGroup() {
-        return httpWorkGroup;
+    public EventLoopGroup getHttpWorkerAndBossGroup() {
+        if (httpWorkerAndBossGroup == null || !systemConfig.isServiceHttpOpen()) {
+            throw new RuntimeException("http工作线程组初始化失败或者未在配置文件中开启http服务的初始化...");
+        }
+        return httpWorkerAndBossGroup;
     }
 }

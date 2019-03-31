@@ -18,4 +18,8 @@ public class StringUtil {
             LOCK.unlock();
         }
     }
+
+    public static String addressPortCombinationRules(String address, int port) {
+        return address + "|" + port;
+    }
 }

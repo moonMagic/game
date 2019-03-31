@@ -2,31 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="625040d3-3d2f-4029-93ec-303298e12d53" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/java/com/charles/annotation/Cron.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/charles/annotation/Http.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/charles/annotation/tcp/TcpClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/charles/annotation/tcp/TcpServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/charles/config/SystemConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/charles/def/GenericDefinition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/charles/def/enums/ServerType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/charles/net/http/BaseHttpMessageWork.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/charles/net/http/HttpMessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/charles/net/tcp/BaseTcpMessageWork.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/charles/net/tcp/MessageHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/charles/net/tcp/TcpClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/com/charles/utils/ByteUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/properties/system.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/com/charles/StartServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/com/charles/StartServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/java/com/charles/manager/NetWorkManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/com/charles/manager/NetWorkManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/com/charles/manager/RecyclableObjectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/com/charles/manager/RecyclableObjectFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/com/charles/net/BaseNetWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/com/charles/net/BaseNetWork.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/java/com/charles/net/tcp/TcpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/com/charles/net/tcp/TcpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/com/charles/net/tcp/TcpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/com/charles/net/tcp/TcpClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/java/com/charles/utils/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/java/com/charles/utils/StringUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/properties/system.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/properties/system.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/charles/StartServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/charles/StartServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/charles/manager/RecyclableObjectFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/charles/manager/RecyclableObjectFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/charles/net/BaseNetWork.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/charles/net/BaseNetWork.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/charles/net/tcp/TcpServer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/charles/net/tcp/TcpServer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/charles/net/tcp/TcpServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/charles/net/tcp/TcpServer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/charles/manager/NetWorkManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/charles/manager/NetWorkManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/charles/net/tcp/BaseTcpMessageWork.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/charles/net/tcp/BaseTcpMessageWork.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/charles/utils/StringUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/charles/utils/StringUtil.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,70 +22,61 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/charles/net/tcp/MessageHandler.java">
+        <entry file="file://$PROJECT_DIR$/src/resources/properties/system.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="297">
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/com/charles/net/tcp/TcpClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="334">
+              <caret line="98" column="49" lean-forward="true" selection-start-line="98" selection-start-column="49" selection-end-line="98" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2466#2539#1" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/java/com/charles/manager/ProjectManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="621">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#745#746#0" expanded="true" />
+                <element signature="e#815#816#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/java/com/charles/net/tcp/TcpClient.java">
+        <entry file="file://$PROJECT_DIR$/src/java/com/charles/config/SystemConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="45" column="25" lean-forward="true" selection-start-line="44" selection-start-column="6" selection-end-line="45" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/charles/manager/NetWorkManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/charles/annotation/Cron.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/charles/annotation/Http.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="7" column="3" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/charles/annotation/tcp/TcpClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/java/com/charles/annotation/tcp/TcpServer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+            <state relative-caret-position="389">
+              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#704#729#1" expanded="true" />
+                <element signature="e#782#804#1" expanded="true" />
+                <element signature="e#871#872#0" expanded="true" />
+                <element signature="e#904#905#0" expanded="true" />
+                <element signature="e#953#954#0" expanded="true" />
+                <element signature="e#997#998#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -118,6 +96,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>1.2</find>
+      <find>..</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -127,7 +106,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/java/com/charles/StartServer.java" />
         <option value="$PROJECT_DIR$/src/java/com/charles/utils/ByteUtils.java" />
         <option value="$PROJECT_DIR$/src/java/com/charles/manager/RecyclableObjectFactory.java" />
         <option value="$PROJECT_DIR$/src/java/com/charles/net/tcp/BaseMessageHandler.java" />
@@ -140,12 +118,15 @@
         <option value="$PROJECT_DIR$/src/java/com/charles/net/tcp/BaseTcpMessageWork.java" />
         <option value="$PROJECT_DIR$/src/java/com/charles/net/tcp/MessageHandler.java" />
         <option value="$PROJECT_DIR$/src/java/com/charles/net/tcp/BaseTcpClient.java" />
-        <option value="$PROJECT_DIR$/src/java/com/charles/manager/NetWorkManager.java" />
         <option value="$PROJECT_DIR$/src/java/com/charles/def/GenericDefinition.java" />
         <option value="$PROJECT_DIR$/src/java/com/charles/def/enums/ServerType.java" />
-        <option value="$PROJECT_DIR$/src/resources/properties/system.properties" />
+        <option value="$PROJECT_DIR$/src/java/com/charles/manager/NetWorkManager.java" />
+        <option value="$PROJECT_DIR$/src/java/com/charles/utils/StringUtil.java" />
+        <option value="$PROJECT_DIR$/src/java/com/charles/utils/Objects.java" />
+        <option value="$PROJECT_DIR$/src/java/com/charles/StartServer.java" />
         <option value="$PROJECT_DIR$/src/java/com/charles/config/SystemConfig.java" />
         <option value="$PROJECT_DIR$/src/java/com/charles/net/tcp/TcpClient.java" />
+        <option value="$PROJECT_DIR$/src/resources/properties/system.properties" />
       </list>
     </option>
   </component>
@@ -159,9 +140,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="y" value="5" />
     <option name="width" value="1920" />
-    <option name="height" value="1035" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -179,98 +159,28 @@
               <item name="network" type="b2602c69:ProjectViewProjectNode" />
               <item name="network" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="charles" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="charles" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="charles" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
-              <item name="tcp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="charles" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="charles" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="charles" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="charles" type="462c0819:PsiDirectoryNode" />
-              <item name="net" type="462c0819:PsiDirectoryNode" />
-              <item name="tcp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Course" />
       <pane id="PackagesPane" />
+      <pane id="NBKnowledgePane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="network" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553865440230" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553956237546" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.415" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
@@ -315,6 +225,9 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="SpringBeansView">
+    <option name="beanDetailsProportion" value="0.3" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -331,40 +244,86 @@
       <workItem from="1553753790118" duration="5919000" />
       <workItem from="1553766942251" duration="18364000" />
       <workItem from="1553846516100" duration="8299000" />
-      <workItem from="1553855943139" duration="599000" />
+      <workItem from="1553855943139" duration="15044000" />
+      <workItem from="1553958517698" duration="834000" />
+      <workItem from="1553960099033" duration="663000" />
+      <workItem from="1553960789697" duration="34000" />
+      <workItem from="1553960854624" duration="41000" />
+      <workItem from="1553960922174" duration="129000" />
+      <workItem from="1553961101383" duration="125000" />
+      <workItem from="1553961254913" duration="270000" />
+      <workItem from="1553961550260" duration="22000" />
+      <workItem from="1553961595629" duration="578000" />
+      <workItem from="1553969875841" duration="73000" />
+      <workItem from="1553969979256" duration="260000" />
+      <workItem from="1553970281205" duration="45000" />
+      <workItem from="1553970359205" duration="761000" />
+      <workItem from="1553971172468" duration="12000" />
+      <workItem from="1553971217057" duration="12000" />
+      <workItem from="1553971260015" duration="24000" />
+      <workItem from="1553971314738" duration="57000" />
+      <workItem from="1553971400897" duration="24000" />
+      <workItem from="1553971454729" duration="128000" />
+      <workItem from="1553971615670" duration="43000" />
+      <workItem from="1553971691443" duration="31000" />
+      <workItem from="1553971750576" duration="703000" />
+      <workItem from="1553972487102" duration="1048000" />
+      <workItem from="1553998766636" duration="1536000" />
+      <workItem from="1554001121838" duration="1287000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62686000" />
+    <option name="totallyTimeSpent" value="85871000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="5" width="1920" height="1035" extended-state="0" />
+    <frame x="0" y="0" width="1920" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.88151044" visible="true" weight="0.10799136" />
-      <window_info id="Structure" order="1" sideWeight="0.118489586" side_tool="true" visible="true" weight="0.10799136" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8429319" visible="true" weight="0.18337801" />
+      <window_info id="Structure" order="1" sideWeight="0.15706806" side_tool="true" visible="true" weight="0.18337801" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Learn" order="7" />
+      <window_info id="JRebel" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.58563536" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.91099197" weight="0.37102085" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.84289545" weight="0.3413831" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="FindBugs-IDEA" order="7" visible="true" weight="0.13122173" />
-      <window_info anchor="bottom" id="Spring" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49383378" weight="0.2766191" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" sideWeight="0.82734585" weight="0.64763993" />
+      <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.49812332" weight="0.5268935" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4997319" weight="0.32930845" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="CheckStyle" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="13" weight="0.45649838" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5008043" side_tool="true" visible="true" weight="0.37102085" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.84932977" weight="0.45444566" />
       <window_info anchor="bottom" id="Database Changes" order="14" />
-      <window_info anchor="bottom" id="Version Control" order="15" />
+      <window_info anchor="bottom" id="Version Control" order="15" sideWeight="0.49329758" weight="0.7420417" />
+      <window_info anchor="bottom" id="Quokka" order="16" />
+      <window_info anchor="bottom" id="Educational.CheckDetails" order="17" />
+      <window_info anchor="bottom" id="Statistic" order="18" sideWeight="0.4997319" weight="0.32930845" />
+      <window_info anchor="bottom" id="Tail" order="19" />
+      <window_info anchor="bottom" id="JRebel Executor" order="20" />
+      <window_info anchor="bottom" id="JRebel Console" order="21" side_tool="true" />
+      <window_info anchor="bottom" id="Code Review" order="22" sideWeight="0.49919572" weight="0.32930845" />
+      <window_info anchor="bottom" id="MAGist" order="23" sideWeight="0.49919572" weight="0.32930845" />
+      <window_info anchor="bottom" id="IvyIDEA" order="24" sideWeight="0.49919572" weight="0.32930845" />
+      <window_info anchor="bottom" id="SonarLint" order="25" sideWeight="0.49919572" weight="0.32930845" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -374,6 +333,13 @@
       <window_info anchor="right" id="Database" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="JSON Utils" order="9" />
+      <window_info anchor="right" id="SQL Formatter" order="10" weight="0.3297587" />
+      <window_info anchor="right" id="Key Promoter X" order="11" weight="0.3297587" />
+      <window_info anchor="right" id="Json Parser" order="12" />
+      <window_info anchor="right" id="JSON Viewer" order="13" />
+      <window_info anchor="right" id="Swing Playground" order="14" side_tool="true" />
+      <window_info anchor="right" id="JRebel Setup Guide" order="15" visible="true" weight="0.020375336" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,49 +358,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/java/com/charles/annotation/XmlNodeProcessing.java" />
-    <entry file="file://$PROJECT_DIR$/src/java/com/charles/annotation/Module.java" />
-    <entry file="file://$PROJECT_DIR$/src/java/com/charles/annotation/file/Value.java" />
-    <entry file="file://$PROJECT_DIR$/src/java/com/charles/annotation/Manager.java" />
-    <entry file="jar://$PROJECT_DIR$/../../../../apache-maven-3.6.0/allCache/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/handler/codec/http/HttpVersion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="186" column="81" selection-start-line="186" selection-start-column="81" selection-end-line="186" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../../../apache-maven-3.6.0/allCache/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/handler/timeout/IdleStateHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="160" column="11" selection-start-line="160" selection-start-column="11" selection-end-line="160" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/charles/net/http/BaseHttpMessageWork.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/jyqp-master/jyqp_netty/src/main/java/com/zk/netty/server/NettyServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="32" column="36" lean-forward="true" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/jyqp-master/jyqp_netty/src/main/java/com/zk/netty/server/NettyServerInitializer.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/jyqp-master/jyqp_netty/src/main/java/com/zk/netty/server/NettyServerHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2997" />
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../../../jdk/jdk12/lib/src.zip!/java.base/java/lang/StringCoding.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1706">
@@ -510,17 +433,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/charles/net/tcp/BaseTcpClient.java" />
-    <entry file="jar://$PROJECT_DIR$/../../../../apache-maven-3.6.0/allCache/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/bootstrap/AbstractBootstrap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1871">
-          <caret line="51" column="33" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="33" />
-          <folding>
-            <element signature="e#3460#3461#0" expanded="true" />
-            <element signature="e#3491#3492#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../../../../apache-maven-3.6.0/allCache/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/bootstrap/ServerBootstrap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -636,59 +548,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/charles/def/GenericDefinition.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/properties/system.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/spring-config.xml">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/charles/config/SystemConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#418#434#1" expanded="true" />
-            <element signature="e#479#506#1" expanded="true" />
-            <element signature="e#561#585#1" expanded="true" />
-            <element signature="e#634#656#1" expanded="true" />
-            <element signature="e#703#728#1" expanded="true" />
-            <element signature="e#778#803#1" expanded="true" />
-            <element signature="e#904#905#0" expanded="true" />
-            <element signature="e#953#954#0" expanded="true" />
-            <element signature="e#997#998#0" expanded="true" />
-            <element signature="e#1053#1054#0" expanded="true" />
-            <element signature="e#1096#1097#0" expanded="true" />
-            <element signature="e#1273#1274#0" expanded="true" />
-            <element signature="e#1313#1314#0" expanded="true" />
-            <element signature="e#1376#1377#0" expanded="true" />
-            <element signature="e#1434#1435#0" expanded="true" />
-            <element signature="e#1476#1477#0" expanded="true" />
-            <element signature="e#1514#1515#0" expanded="true" />
-            <element signature="e#1577#1578#0" expanded="true" />
-            <element signature="e#1631#1632#0" expanded="true" />
-            <element signature="e#1676#1677#0" expanded="true" />
-            <element signature="e#1717#1718#0" expanded="true" />
-            <element signature="e#1785#1786#0" expanded="true" />
-            <element signature="e#1845#1846#0" expanded="true" />
-            <element signature="e#1884#1885#0" expanded="true" />
-            <element signature="e#1922#1923#0" expanded="true" />
-            <element signature="e#1981#1982#0" expanded="true" />
-            <element signature="e#2035#2036#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/charles/def/enums/ServerType.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -705,18 +566,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/charles/manager/ProjectManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#745#746#0" expanded="true" />
-            <element signature="e#815#816#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/charles/manager/RecyclableObjectFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-454">
@@ -727,27 +576,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/charles/net/tcp/MessageHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/charles/manager/NetWorkManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="945">
-          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/charles/annotation/Cron.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="13" column="15" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/charles/annotation/tcp/TcpServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -765,17 +604,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/java/com/charles/annotation/tcp/TcpServer.java">
+    <entry file="jar://$PROJECT_DIR$/../../../../apache-maven-3.6.0/allCache/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/bootstrap/AbstractBootstrap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="280" column="26" selection-start-line="280" selection-start-column="26" selection-end-line="280" selection-end-column="26" />
+          <folding>
+            <element signature="e#3460#3461#0" expanded="true" />
+            <element signature="e#3491#3492#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../jdk/jdk12/lib/src.zip!/java.base/java/util/Objects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="281" column="26" selection-start-line="281" selection-start-column="26" selection-end-line="281" selection-end-column="26" />
+          <folding>
+            <element signature="e#9456#9457#0" expanded="true" />
+            <element signature="e#9490#9491#0" expanded="true" />
+            <element signature="e#10048#10049#0" expanded="true" />
+            <element signature="e#10082#10083#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/charles/utils/Objects.java" />
+    <entry file="jar://$PROJECT_DIR$/../../../../apache-maven-3.6.0/allCache/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/ChannelHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="177" column="17" selection-start-line="177" selection-start-column="17" selection-end-line="177" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../apache-maven-3.6.0/allCache/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/ChannelOutboundHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../apache-maven-3.6.0/allCache/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/ChannelDuplexHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="104" column="18" lean-forward="true" selection-start-line="104" selection-start-column="18" selection-end-line="104" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../apache-maven-3.6.0/allCache/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/channel/ChannelPromise.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../../../../apache-maven-3.6.0/allCache/io/netty/netty-all/4.1.34.Final/netty-all-4.1.34.Final-sources.jar!/io/netty/handler/stream/ChunkedWriteHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="222">
+          <caret line="220" column="37" lean-forward="true" selection-start-line="220" selection-start-column="37" selection-end-line="220" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/charles/def/GenericDefinition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="61">
+          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/charles/net/tcp/MessageHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
-          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/charles/StartServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="e#166#167#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/charles/utils/StringUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="e#514#515#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/charles/manager/NetWorkManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1269">
+          <caret line="56" column="37" selection-start-line="56" selection-start-column="23" selection-end-line="56" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="96" column="36" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/java/com/charles/net/tcp/TcpClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="45" column="25" lean-forward="true" selection-start-line="44" selection-start-column="6" selection-end-line="45" selection-end-column="25" />
+        <state relative-caret-position="334">
+          <caret line="98" column="49" lean-forward="true" selection-start-line="98" selection-start-column="49" selection-end-line="98" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2466#2539#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/charles/manager/ProjectManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#815#816#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/properties/system.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/java/com/charles/config/SystemConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#704#729#1" expanded="true" />
+            <element signature="e#782#804#1" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#904#905#0" expanded="true" />
+            <element signature="e#953#954#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -788,7 +772,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.415" />
               </list>
             </option>
           </splitter-proportions>
@@ -796,11 +780,11 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring</last-edited>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.415" />
               </list>
             </option>
           </splitter-proportions>
@@ -819,11 +803,11 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>12</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.415" />
               </list>
             </option>
           </splitter-proportions>
@@ -831,12 +815,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>network</last-edited>
+          <last-edited>Spring|network</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.415" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -848,12 +831,45 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.415" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.415" />
               </list>
             </option>
           </splitter-proportions>
         </settings>
       </state>
     </states>
+  </component>
+  <component name="p4-ProjectCache">
+    <option name="serverState">
+      <list />
+    </option>
+    <option name="clientState">
+      <list />
+    </option>
+    <option name="pendingActions">
+      <list />
+    </option>
+    <option name="changelistState">
+      <State>
+        <option name="lastPendingChangelistId" value="-2" />
+        <option name="linkedChangelistMap">
+          <list />
+        </option>
+        <option name="pendingChangelistMap">
+          <list />
+        </option>
+      </State>
+    </option>
   </component>
 </project>

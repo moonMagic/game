@@ -2,6 +2,7 @@ package com.charles.net.tcp;
 
 
 import com.charles.config.SystemConfig;
+import com.charles.utils.StringUtil;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.PooledByteBufAllocator;
 import io.netty.channel.*;
@@ -12,9 +13,10 @@ import io.netty.handler.timeout.IdleStateHandler;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
-import java.net.SocketException;
+import java.net.InetSocketAddress;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -22,22 +24,22 @@ import java.util.concurrent.TimeUnit;
  *
  * @author charlesLee
  */
-@Component
-public class TcpClient implements Runnable {
+public class TcpClient {
 
     private static final Logger LOGGER = LogManager.getLogger(TcpClient.class);
 
-    private final SystemConfig systemConfig;
+    private  SystemConfig systemConfig;
+
+    private Map<String, Channel> clientCache = new ConcurrentHashMap<>();
 
     /**
      * 为该客户端监听启动的线程的名字
      */
-    protected String threadName;
+    private String threadName;
 
-    @Autowired
-    public TcpClient(SystemConfig systemConfig) {
-        this.systemConfig = systemConfig;
-    }
+    private Bootstrap clientBootStrap;
+
+    private NioEventLoopGroup group;
 
 
     /**
@@ -45,70 +47,76 @@ public class TcpClient implements Runnable {
      *
      * @author charlesLee
      */
-    public TcpClient start(String threadName) {
+    public void start(String threadName, NioEventLoopGroup group) {
         this.threadName = threadName;
-        Thread thread = new Thread(this);
-        thread.setName((threadName == null || "".equals(threadName)) ? "tcp-client-listener-service-thread" : threadName);
-        thread.start();
-        return this;
+        this.group = group;
     }
 
-    @Override
-    public void run() {
-        connect();
+
+    private void initBootstrap() {
+        clientBootStrap = new Bootstrap();
+        clientBootStrap.group(group).channel(NioSocketChannel.class).option(ChannelOption.TCP_NODELAY, true)
+                .option(ChannelOption.SO_KEEPALIVE, true)
+                .option(ChannelOption.ALLOCATOR, PooledByteBufAllocator.DEFAULT)
+                .option(ChannelOption.TCP_NODELAY, true)
+                .handler(new ChannelInitializer<SocketChannel>() {
+                    @Override
+                    public void initChannel(SocketChannel ch) {
+                        ChannelPipeline p = ch.pipeline();
+                        p.addLast(new IdleStateHandler(0, 0, 180, TimeUnit.SECONDS));
+                        p.addLast(new Decoder());
+                        p.addLast(new Encoder());
+//                        p.addLast(new handler());
+                    }
+                });
     }
 
-    /**
-     * @author charlesLee
-     * 启动客户端用来绑定服务端的端口
-     **/
-    private void connect() {
-        EventLoopGroup group = new NioEventLoopGroup();
-        try {
-            Bootstrap b = new Bootstrap();
-            b.group(group).channel(NioSocketChannel.class).option(ChannelOption.TCP_NODELAY, true)
-                    .option(ChannelOption.SO_KEEPALIVE, true)
-                    .option(ChannelOption.ALLOCATOR, PooledByteBufAllocator.DEFAULT)
-                    .option(ChannelOption.TCP_NODELAY, true)
-                    .handler(new ChannelInitializer<SocketChannel>() {
-                        @Override
-                        public void initChannel(SocketChannel ch) {
-                            ChannelPipeline p = ch.pipeline();
-                            p.addLast(new IdleStateHandler(0, 0, 180, TimeUnit.SECONDS));
-                            p.addLast(new Decoder());
-                            p.addLast(new Encoder());
 
-                        }
-                    });
-            // 绑定
-            ChannelFuture clientFuture = b.connect(serverAddress, serverPort).sync();
-            // 客户端向服务器申请注册
-            register(clientFuture);
-            clientFuture.channel().closeFuture().sync();
-        } catch (Exception e) {
-            connectionDisconnect = true;
-            // 这里编译器警告忽略，如果socket链接异常的话，这里一定会触发的
-            if (e instanceof SocketException) {
-                LOGGER.error(getDef() + ",链接异常，正在重复尝试中......");
-            } else {
-                LOGGER.error(getDef() + ",未知连接错误.......");
-            }
-        } finally {
-            // 当与服务器断开连接之后，这里会调用
-            connectionDisconnect = true;
-            group.shutdownGracefully();
-            // 五秒一次，自动重连
-            try {
-                Thread.sleep(5000);
-                connect();
-            } catch (InterruptedException ignored) {
-            }
+    public void bind(String serverAddress, int port) {
+        if (serverAddress == null || "".equals(serverAddress) || port == 0) {
+            throw new IllegalArgumentException("需要绑定的地址和端口都不可以为空...");
         }
+        String key = StringUtil.addressPortCombinationRules(serverAddress, port);
+        Channel channel = clientCache.get(key);
+        if (channel != null) {
+            throw new RuntimeException(key + ", 不可连接通道...");
+        }
+        ChannelFuture future = clientBootStrap.bind(new InetSocketAddress(serverAddress, port));
+        clientCache.put(key, future.channel());
     }
 
+//    private void connect() {
+//        try {
+//            Bootstrap b = new Bootstrap();
+//            ChannelFuture clientFuture = b.connect(serverAddress, serverPort).sync();
+//            // 客户端向服务器申请注册
+//            register(clientFuture);
+//            clientFuture.channel().closeFuture().sync();
+//        } catch (Exception e) {
+//            connectionDisconnect = true;
+//            // 这里编译器警告忽略，如果socket链接异常的话，这里一定会触发的
+//            if (e instanceof SocketException) {
+//                LOGGER.error(getDef() + ",链接异常，正在重复尝试中......");
+//            } else {
+//                LOGGER.error(getDef() + ",未知连接错误.......");
+//            }
+//        } finally {
+//            // 当与服务器断开连接之后，这里会调用
+//            connectionDisconnect = true;
+//            group.shutdownGracefully();
+//            // 五秒一次，自动重连
+//            try {
+//                Thread.sleep(5000);
+//                connect();
+//            } catch (InterruptedException ignored) {
+//            }
+//        }
+//    }
+
     /**
-     * @author charlesLee
      * 客户端向服务端申请注册
+     *
+     * @author charlesLee
      */
     private void register(ChannelFuture clientFuture) {
 
@@ -120,5 +128,9 @@ public class TcpClient implements Runnable {
      */
     public void setCtx(ChannelHandlerContext ctx) {
 
+    }
+
+    public String getThreadName() {
+        return threadName;
     }
 }

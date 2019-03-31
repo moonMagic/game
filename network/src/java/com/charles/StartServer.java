@@ -8,6 +8,5 @@ import com.charles.manager.ProjectManager;
 public class StartServer {
     public static void main(String[] args) {
         ProjectManager.getInstance().init("classpath:spring-config.xml");
-
     }
 }
