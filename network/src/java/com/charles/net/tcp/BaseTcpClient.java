@@ -85,33 +85,6 @@ public class TcpClient {
         clientCache.put(key, future.channel());
     }
 
-//    private void connect() {
-//        try {
-//            Bootstrap b = new Bootstrap();
-//            ChannelFuture clientFuture = b.connect(serverAddress, serverPort).sync();
-//            // 客户端向服务器申请注册
-//            register(clientFuture);
-//            clientFuture.channel().closeFuture().sync();
-//        } catch (Exception e) {
-//            connectionDisconnect = true;
-//            // 这里编译器警告忽略，如果socket链接异常的话，这里一定会触发的
-//            if (e instanceof SocketException) {
-//                LOGGER.error(getDef() + ",链接异常，正在重复尝试中......");
-//            } else {
-//                LOGGER.error(getDef() + ",未知连接错误.......");
-//            }
-//        } finally {
-//            // 当与服务器断开连接之后，这里会调用
-//            connectionDisconnect = true;
-//            group.shutdownGracefully();
-//            // 五秒一次，自动重连
-//            try {
-//                Thread.sleep(5000);
-//                connect();
-//            } catch (InterruptedException ignored) {
-//            }
-//        }
-//    }
 
     /**
      * 客户端向服务端申请注册
